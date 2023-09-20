@@ -8,6 +8,8 @@ function App() {
     <div className="App">
       <header className="App-header">
         <Maths></Maths>
+        <Maths></Maths>
+        <Maths></Maths>
         {/* <Hello name="Anu" />
         <Hello name="Liisu" />
         <Hello
