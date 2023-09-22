@@ -5,7 +5,7 @@ const Maths = () => {
   return (
     <>
       <div>{count}</div>
-      <button onClick={() => setCount(count + 1)}>Press me</button>
+      <button onClick={() => setCount(count - 100)}>Vajuta siia</button>
     </>
   )
 }
