@@ -14,10 +14,11 @@ function App() {
       <Kodutoo></Kodutoo>
       <Card
           color="black"
-          number={5}
+          number={2}
           image="https://eidk95seyu2.exactdn.com/en/blog/wp-content/uploads/2021/03/playing-cards_header.jpg?strip=all&lossy=1&ssl=1"
           description="Minu kaart"
         />
+        <br />
         <Maths></Maths>
         <Maths></Maths>
         <Maths></Maths>
