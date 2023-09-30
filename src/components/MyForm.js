@@ -10,27 +10,35 @@ const MyForm = () => {
   const saveFields = event => {
     setMyForm(previous => ({
       ...previous,
-      [event.target.value]: event.target.value
+      [event.target.name]: event.target.value
     }))
   }
 
   const submitForm = event => {
     event.preventDefault()
 
-    console.log({ myForm })
+    console.log( myForm )
   }
 
   //   useEffect(() => {
   //     console.log("No dependency array")
   //   })
 
-  useEffect(() => {
-    console.log("Empty dependency array")
-  }, [])
+  const listenClicks = e => {
+    console.log({x: e.x, y: e.y})
+  }
 
   useEffect(() => {
-    console.log("myForm updated")
-  }, [myForm])
+    console.log("Empty dependency array")
+
+    document.addEventListener("click", listenClicks)
+
+    return () => document.removeEventListener("click", listenClicks)
+  }, [])
+
+  // useEffect(() => {
+  //   console.log("myForm updated")
+  // }, [myForm])
 
   return (
     <form onSubmit={submitForm}>
@@ -45,13 +53,13 @@ const MyForm = () => {
       >
         <TextField
           required
-          name="Name"
+          name="name"
           id="outlined-required"
           label="Name"
           onChange={saveFields}
         />
         <TextField
-          name="School"
+          name="school"
           id="outlined-required"
           label="School"
           onChange={saveFields}
